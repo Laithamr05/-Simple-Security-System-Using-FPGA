@@ -1,0 +1,289 @@
+Classic Timing Analyzer report for Expirement9
+Wed Sep 10 16:29:58 2025
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                 ;
++------------------------------+-------+---------------+-------------+------------------------------------------------------+------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From                                                 ; To                                                   ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+------------------------------------------------------+------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 4.313 ns    ; I1                                                   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 7.597 ns    ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst16|q ; green                                                ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.748 ns   ; select                                               ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q ; --         ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;             ;                                                      ;                                                      ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+------------------------------------------------------+------------------------------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 10     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                          ;
++-------+--------------+------------+--------+------------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From   ; To                                                   ; To Clock ;
++-------+--------------+------------+--------+------------------------------------------------------+----------+
+; N/A   ; None         ; 4.313 ns   ; I1     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q ; clk      ;
+; N/A   ; None         ; 4.184 ns   ; I2     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q ; clk      ;
+; N/A   ; None         ; 4.057 ns   ; I1     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst18|q ; clk      ;
+; N/A   ; None         ; 3.997 ns   ; I3     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst16|q ; clk      ;
+; N/A   ; None         ; 3.928 ns   ; I2     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst18|q ; clk      ;
+; N/A   ; None         ; 3.928 ns   ; I1     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst19|q ; clk      ;
+; N/A   ; None         ; 3.873 ns   ; I3     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q ; clk      ;
+; N/A   ; None         ; 3.871 ns   ; I3     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst20|q ; clk      ;
+; N/A   ; None         ; 3.730 ns   ; I2     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst19|q ; clk      ;
+; N/A   ; None         ; 3.695 ns   ; I1     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst22|q ; clk      ;
+; N/A   ; None         ; 3.695 ns   ; I1     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst18|q ; clk      ;
+; N/A   ; None         ; 3.664 ns   ; I2     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst16|q ; clk      ;
+; N/A   ; None         ; 3.660 ns   ; I2     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst20|q ; clk      ;
+; N/A   ; None         ; 3.637 ns   ; I3     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst16|q ; clk      ;
+; N/A   ; None         ; 3.618 ns   ; I3     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst19|q ; clk      ;
+; N/A   ; None         ; 3.616 ns   ; I3     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst18|q ; clk      ;
+; N/A   ; None         ; 3.568 ns   ; I1     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst19|q ; clk      ;
+; N/A   ; None         ; 3.566 ns   ; I2     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst22|q ; clk      ;
+; N/A   ; None         ; 3.566 ns   ; I2     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst18|q ; clk      ;
+; N/A   ; None         ; 3.511 ns   ; I3     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst20|q ; clk      ;
+; N/A   ; None         ; 3.370 ns   ; I2     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst19|q ; clk      ;
+; N/A   ; None         ; 3.304 ns   ; I2     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst16|q ; clk      ;
+; N/A   ; None         ; 3.300 ns   ; I2     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst20|q ; clk      ;
+; N/A   ; None         ; 3.258 ns   ; I3     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst19|q ; clk      ;
+; N/A   ; None         ; 3.255 ns   ; I3     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst22|q ; clk      ;
+; N/A   ; None         ; 3.254 ns   ; I3     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst18|q ; clk      ;
+; N/A   ; None         ; 2.987 ns   ; select ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst19|q ; clk      ;
+; N/A   ; None         ; 2.987 ns   ; select ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst22|q ; clk      ;
+; N/A   ; None         ; 2.987 ns   ; select ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst18|q ; clk      ;
+; N/A   ; None         ; 2.987 ns   ; select ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst20|q ; clk      ;
+; N/A   ; None         ; 2.987 ns   ; select ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst19|q ; clk      ;
+; N/A   ; None         ; 2.987 ns   ; select ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst16|q ; clk      ;
+; N/A   ; None         ; 2.987 ns   ; select ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst18|q ; clk      ;
+; N/A   ; None         ; 2.987 ns   ; select ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst16|q ; clk      ;
+; N/A   ; None         ; 2.987 ns   ; select ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst20|q ; clk      ;
+; N/A   ; None         ; 2.987 ns   ; select ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q ; clk      ;
++-------+--------------+------------+--------+------------------------------------------------------+----------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                              ;
++-------+--------------+------------+------------------------------------------------------+----------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                 ; To       ; From Clock ;
++-------+--------------+------------+------------------------------------------------------+----------+------------+
+; N/A   ; None         ; 7.597 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst16|q ; green    ; clk        ;
+; N/A   ; None         ; 7.539 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q ; green    ; clk        ;
+; N/A   ; None         ; 7.538 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst16|q ; green    ; clk        ;
+; N/A   ; None         ; 7.233 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst18|q ; green    ; clk        ;
+; N/A   ; None         ; 7.202 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst16|q ; red      ; clk        ;
+; N/A   ; None         ; 7.170 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst20|q ; green    ; clk        ;
+; N/A   ; None         ; 7.144 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q ; red      ; clk        ;
+; N/A   ; None         ; 7.143 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst16|q ; red      ; clk        ;
+; N/A   ; None         ; 7.122 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst19|q ; DataB[5] ; clk        ;
+; N/A   ; None         ; 7.095 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst20|q ; green    ; clk        ;
+; N/A   ; None         ; 7.034 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst18|q ; green    ; clk        ;
+; N/A   ; None         ; 6.960 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst19|q ; green    ; clk        ;
+; N/A   ; None         ; 6.838 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst18|q ; red      ; clk        ;
+; N/A   ; None         ; 6.775 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst20|q ; red      ; clk        ;
+; N/A   ; None         ; 6.725 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q ; DataA[4] ; clk        ;
+; N/A   ; None         ; 6.700 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst20|q ; red      ; clk        ;
+; N/A   ; None         ; 6.652 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst20|q ; DataB[6] ; clk        ;
+; N/A   ; None         ; 6.639 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst18|q ; red      ; clk        ;
+; N/A   ; None         ; 6.565 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst19|q ; red      ; clk        ;
+; N/A   ; None         ; 6.562 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst22|q ; green    ; clk        ;
+; N/A   ; None         ; 6.536 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst19|q ; green    ; clk        ;
+; N/A   ; None         ; 6.336 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst20|q ; DataA[6] ; clk        ;
+; N/A   ; None         ; 6.167 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst22|q ; red      ; clk        ;
+; N/A   ; None         ; 6.141 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst19|q ; red      ; clk        ;
+; N/A   ; None         ; 5.833 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst22|q ; DataB[4] ; clk        ;
+; N/A   ; None         ; 5.603 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst19|q ; DataA[5] ; clk        ;
+; N/A   ; None         ; 5.163 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst18|q ; DataB[0] ; clk        ;
+; N/A   ; None         ; 5.153 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst18|q ; DataB[3] ; clk        ;
+; N/A   ; None         ; 5.153 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst18|q ; DataA[3] ; clk        ;
+; N/A   ; None         ; 5.105 ns   ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst16|q ; DataB[2] ; clk        ;
+; N/A   ; None         ; 5.094 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst18|q ; DataA[0] ; clk        ;
+; N/A   ; None         ; 5.060 ns   ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst16|q ; DataA[2] ; clk        ;
++-------+--------------+------------+------------------------------------------------------+----------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                 ;
++---------------+-------------+-----------+--------+------------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From   ; To                                                   ; To Clock ;
++---------------+-------------+-----------+--------+------------------------------------------------------+----------+
+; N/A           ; None        ; -2.748 ns ; select ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst19|q ; clk      ;
+; N/A           ; None        ; -2.748 ns ; select ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst22|q ; clk      ;
+; N/A           ; None        ; -2.748 ns ; select ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst18|q ; clk      ;
+; N/A           ; None        ; -2.748 ns ; select ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst20|q ; clk      ;
+; N/A           ; None        ; -2.748 ns ; select ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst19|q ; clk      ;
+; N/A           ; None        ; -2.748 ns ; select ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst16|q ; clk      ;
+; N/A           ; None        ; -2.748 ns ; select ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst18|q ; clk      ;
+; N/A           ; None        ; -2.748 ns ; select ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst16|q ; clk      ;
+; N/A           ; None        ; -2.748 ns ; select ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst20|q ; clk      ;
+; N/A           ; None        ; -2.748 ns ; select ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q ; clk      ;
+; N/A           ; None        ; -3.015 ns ; I3     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst18|q ; clk      ;
+; N/A           ; None        ; -3.016 ns ; I3     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst22|q ; clk      ;
+; N/A           ; None        ; -3.019 ns ; I3     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst19|q ; clk      ;
+; N/A           ; None        ; -3.061 ns ; I2     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst20|q ; clk      ;
+; N/A           ; None        ; -3.065 ns ; I2     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst16|q ; clk      ;
+; N/A           ; None        ; -3.131 ns ; I2     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst19|q ; clk      ;
+; N/A           ; None        ; -3.272 ns ; I3     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst20|q ; clk      ;
+; N/A           ; None        ; -3.327 ns ; I2     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst22|q ; clk      ;
+; N/A           ; None        ; -3.327 ns ; I2     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst18|q ; clk      ;
+; N/A           ; None        ; -3.329 ns ; I1     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst19|q ; clk      ;
+; N/A           ; None        ; -3.377 ns ; I3     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst18|q ; clk      ;
+; N/A           ; None        ; -3.379 ns ; I3     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst19|q ; clk      ;
+; N/A           ; None        ; -3.398 ns ; I3     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst16|q ; clk      ;
+; N/A           ; None        ; -3.421 ns ; I2     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst20|q ; clk      ;
+; N/A           ; None        ; -3.425 ns ; I2     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst16|q ; clk      ;
+; N/A           ; None        ; -3.456 ns ; I1     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst22|q ; clk      ;
+; N/A           ; None        ; -3.456 ns ; I1     ; Memory-System-Block-Diagram:inst5|dFlipFlop:inst18|q ; clk      ;
+; N/A           ; None        ; -3.491 ns ; I2     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst19|q ; clk      ;
+; N/A           ; None        ; -3.632 ns ; I3     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst20|q ; clk      ;
+; N/A           ; None        ; -3.634 ns ; I3     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q ; clk      ;
+; N/A           ; None        ; -3.689 ns ; I2     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst18|q ; clk      ;
+; N/A           ; None        ; -3.689 ns ; I1     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst19|q ; clk      ;
+; N/A           ; None        ; -3.758 ns ; I3     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst16|q ; clk      ;
+; N/A           ; None        ; -3.818 ns ; I1     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst18|q ; clk      ;
+; N/A           ; None        ; -3.945 ns ; I2     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q ; clk      ;
+; N/A           ; None        ; -4.074 ns ; I1     ; Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q ; clk      ;
++---------------+-------------+-----------+--------+------------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Wed Sep 10 16:29:58 2025
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Expirement9 -c Expirement9 --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Info: No valid register-to-register data paths exist for clock "clk"
+Info: tsu for register "Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q" (data pin = "I1", clock pin = "clk") is 4.313 ns
+    Info: + Longest pin to register delay is 6.707 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.762 ns) = 0.762 ns; Loc. = PIN_D10; Fanout = 3; PIN Node = 'I1'
+        Info: 2: + IC(4.826 ns) + CELL(0.346 ns) = 5.934 ns; Loc. = LCCOMB_X30_Y3_N20; Fanout = 2; COMB Node = 'priority_encoder:inst|WideOr0~0'
+        Info: 3: + IC(0.464 ns) + CELL(0.309 ns) = 6.707 ns; Loc. = LCFF_X30_Y3_N13; Fanout = 2; REG Node = 'Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q'
+        Info: Total cell delay = 1.417 ns ( 21.13 % )
+        Info: Total interconnect delay = 5.290 ns ( 78.87 % )
+    Info: + Micro setup delay of destination is 0.090 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 2.484 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 10; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.669 ns) + CELL(0.618 ns) = 2.484 ns; Loc. = LCFF_X30_Y3_N13; Fanout = 2; REG Node = 'Memory-System-Block-Diagram:inst6|dFlipFlop:inst22|q'
+        Info: Total cell delay = 1.472 ns ( 59.26 % )
+        Info: Total interconnect delay = 1.012 ns ( 40.74 % )
+Info: tco from clock "clk" to destination pin "green" through register "Memory-System-Block-Diagram:inst6|dFlipFlop:inst16|q" is 7.597 ns
+    Info: + Longest clock path from clock "clk" to source register is 2.484 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 10; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.669 ns) + CELL(0.618 ns) = 2.484 ns; Loc. = LCFF_X30_Y3_N17; Fanout = 2; REG Node = 'Memory-System-Block-Diagram:inst6|dFlipFlop:inst16|q'
+        Info: Total cell delay = 1.472 ns ( 59.26 % )
+        Info: Total interconnect delay = 1.012 ns ( 40.74 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Longest register to pin delay is 5.019 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X30_Y3_N17; Fanout = 2; REG Node = 'Memory-System-Block-Diagram:inst6|dFlipFlop:inst16|q'
+        Info: 2: + IC(0.351 ns) + CELL(0.346 ns) = 0.697 ns; Loc. = LCCOMB_X30_Y3_N0; Fanout = 1; COMB Node = 'inst11~0'
+        Info: 3: + IC(0.248 ns) + CELL(0.357 ns) = 1.302 ns; Loc. = LCCOMB_X30_Y3_N14; Fanout = 2; COMB Node = 'inst11'
+        Info: 4: + IC(1.583 ns) + CELL(2.134 ns) = 5.019 ns; Loc. = PIN_T3; Fanout = 0; PIN Node = 'green'
+        Info: Total cell delay = 2.837 ns ( 56.53 % )
+        Info: Total interconnect delay = 2.182 ns ( 43.47 % )
+Info: th for register "Memory-System-Block-Diagram:inst5|dFlipFlop:inst19|q" (data pin = "select", clock pin = "clk") is -2.748 ns
+    Info: + Longest clock path from clock "clk" to destination register is 2.484 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 10; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.669 ns) + CELL(0.618 ns) = 2.484 ns; Loc. = LCFF_X30_Y3_N3; Fanout = 2; REG Node = 'Memory-System-Block-Diagram:inst5|dFlipFlop:inst19|q'
+        Info: Total cell delay = 1.472 ns ( 59.26 % )
+        Info: Total interconnect delay = 1.012 ns ( 40.74 % )
+    Info: + Micro hold delay of destination is 0.149 ns
+    Info: - Shortest pin to register delay is 5.381 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.857 ns) = 0.857 ns; Loc. = PIN_AB7; Fanout = 10; PIN Node = 'select'
+        Info: 2: + IC(3.778 ns) + CELL(0.746 ns) = 5.381 ns; Loc. = LCFF_X30_Y3_N3; Fanout = 2; REG Node = 'Memory-System-Block-Diagram:inst5|dFlipFlop:inst19|q'
+        Info: Total cell delay = 1.603 ns ( 29.79 % )
+        Info: Total interconnect delay = 3.778 ns ( 70.21 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 198 megabytes
+    Info: Processing ended: Wed Sep 10 16:29:58 2025
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
